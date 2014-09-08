@@ -3,3 +3,10 @@
 <br>
 <%= @post.description %>
 
+<%= render 'tags/form' %>
+
+<ul>
+<% @post.tags.each do |tag| %>
+  <li><%= tag.user.email %></li>
+<% end %>
+</ul>
