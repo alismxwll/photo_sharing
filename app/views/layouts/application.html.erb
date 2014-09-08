@@ -17,6 +17,9 @@
   <%= link_to "New User", signup_path %>
   <%= link_to "Log In", login_path %>
   <% end %>
+
+  <%= flash[:notice] %>
+  <%= flash[:alert] %>
 <%= yield %>
 
 </body>
