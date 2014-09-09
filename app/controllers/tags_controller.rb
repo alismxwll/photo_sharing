@@ -13,7 +13,6 @@ class TagsController < ApplicationController
     if @tag.valid?
       redirect_to post_path(@post)
     else
-      # notice: "Something went terribly wrong... Try again..."
       redirect_to post_path(@post)
     end
   end
