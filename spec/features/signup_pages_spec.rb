@@ -12,10 +12,12 @@ describe "the signup process" do
 
   it "dosent sign up a user who is creating a new account and inputs wrong pasword" do
     visit '/signup'
-    user = User.create(:email => 'thisbetterwork@example.com', :password => 'example')
+    # user = User.create(:email => 'thisbetterwork@example.com', :password => 'example')
     fill_in 'Email', :with => 'thisbetterwork@example.com'
-    fill_in 'Password', :with => 'exampl'
+    fill_in 'Password', :with => 'example'
+    fill_in 'Password confirmation', :with => 'examp'
     click_button 'Create User'
     expect(page).to have_content 'Sign Up'
   end
 end
+
