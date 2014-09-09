@@ -4,11 +4,17 @@
 <%= @post.description %>
 
 <%= render 'tags/form' %>
-
+<h4>Tags</h4>
 <ul>
 <% @post.tags.each do |tag| %>
   <li><%= tag.user.email %></li>
 <% end %>
 </ul>
 
+<h4>Comments</h4>
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li><%= comment.comment %></li>
+  <% end %>
+</ul>
 <%= render '/comments/form' %>
