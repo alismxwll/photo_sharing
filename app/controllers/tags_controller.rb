@@ -1,5 +1,7 @@
 class TagsController < ApplicationController
 
+ before_filter :authorize, only:[:new, :create]
+
   def new
     @post = Post.find(params[:post_id])
     @tag = Tag.new
